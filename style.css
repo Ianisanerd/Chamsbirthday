@@ -1,0 +1,423 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to right, #ff99cc, #ffcc99);
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.birthday-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 50px;
+    width: 100%;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    position: relative;
+}
+
+.birthday-card:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.image-container img {
+    /* These apply to all images in .image-container by default */
+    max-width: 80%; /* Ensures images don't overflow their direct container */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.main-birthday-image img {
+    border: 3px solid #e91e63;
+    /* --- MODIFIED LINE BELOW --- */
+    max-width: 10%; /* Adjust this percentage to make the cake image smaller */
+    /* --- END MODIFIED LINE --- */
+    display: block; /* Ensure it's centered */
+    margin: 0 auto; /* Center the image within its container */
+}
+
+.message {
+    font-style: italic;
+    color: #666;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* --- Styles for random design images (unchanged) --- */
+.design-element {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+    z-index: 0;
+    opacity: 0.7;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+}
+
+.design-element.small {
+    width: 50px;
+}
+.design-element.medium {
+    width: 100px;
+}
+.design-element.large {
+    width: 150px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.design-element.animated {
+    animation: float 3s ease-in-out infinite;
+}body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to right, #ff99cc, #ffcc99);
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Essential for positioning design images relative to the body */
+    overflow: hidden; /* Hide anything that goes outside the body */
+}
+
+.birthday-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1; /* Ensure card is above design images */
+    position: relative; /* Needed for z-index to work correctly */
+}
+
+.birthday-card:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.main-birthday-image img {
+    border: 3px solid #e91e63;
+    max-width: 40%; /* The cake image size */
+    display: block;
+    margin: 0 auto;
+}
+
+.message {
+    font-style: italic;
+    color: #666;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* --- New styles for specific design images --- */
+.design-element {
+    position: absolute; /* Crucial for placing images anywhere */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain;
+    z-index: 0; /* Place behind the birthday card */
+    opacity: 0.8; /* Slightly transparent */
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); /* Add subtle shadow */
+}
+
+/* Individual positioning and sizing for each design image */
+
+#designImg1 { /* This could be your balloon.png */
+    width: 180px;
+    top: 5%;
+    left: 10%;
+    transform: rotate(-15deg); /* Tilt it a bit */
+}
+
+#designImg2 { /* This could be your confetti1.png */
+    width: 150px;
+    top: 15%;
+    right: 8%;
+    transform: rotate(20deg);
+}
+
+#designImg3 { /* This could be your star.png */
+    width: 200px;
+    bottom: 10%;
+    left: 5%;
+    transform: rotate(5deg);
+}
+
+#designImg4 { /* This could be your gift_box.png */
+    width: 200px;
+    bottom: 5%;
+    right: 15%;
+    transform: rotate(-10deg);
+}
+
+/* Add more #designImgX rules here for any other images you add to index.html */
+/* Example: */
+/*
+#designImg5 {
+    width: 70px;
+    top: 30%;
+    left: 2%;
+    transform: rotate(0deg);
+}
+*/
+
+/* Optional: Animation for floating effect for all design elements */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
+    50% { transform: translateY(-10px) rotate(var(--rotation, 0deg)); }
+    100% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
+}
+
+.design-element {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Override animation rotation for specific elements if they have their own rotation */
+#designImg1 { --rotation: -15deg; }
+#designImg2 { --rotation: 20deg; }
+#designImg3 { --rotation: 5deg; }
+#designImg4 { --rotation: -10deg; }
+/* Add --rotation for any other design images you give a specific rotation */body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to right, #ff99cc, #ffcc99);
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Hide anything that goes outside the body */
+}
+
+.birthday-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%; /* Keeps the card from being too wide on small screens */
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1; /* Ensures card is above design images */
+    position: relative; /* Needed for z-index to work correctly */
+}
+
+.birthday-card:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.main-birthday-image img {
+    border: 3px solid #e91e63;
+    max-width: 60%; /* Cake image size */
+    display: block;
+    margin: 0 auto;
+}
+
+.message {
+    font-style: italic;
+    color: #666;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* --- Styles for your fixed design images --- */
+.design-element {
+    position: absolute;
+    height: auto;
+    object-fit: contain;
+    z-index: 0; /* Ensures these are *behind* the main birthday card */
+    opacity: 0.8;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+}
+
+/* Individual positioning and sizing for EACH design image */
+/* Adjusted to place them further out, in the corners/edges of the viewport */
+
+#designImg1 { /* Example: balloon.png */
+    width: 15vw; /* 15% of the viewport width */
+    top: 3vh;   /* Pushed closer to the top edge */
+    left: 5vw; /* Pushed closer to the left edge */
+    transform: rotate(-15deg);
+}
+
+#designImg2 { /* Example: confetti1.png */
+    width: 10vw;
+    top: 8vh;   /* Pushed closer to the top edge */
+    right: 3vw; /* Pushed closer to the right edge */
+    transform: rotate(20deg);
+}
+
+#designImg3 { /* Example: star.png */
+    width: 8vw;
+    bottom: 5vh; /* Pushed closer to the bottom edge */
+    left: 3vw;
+    transform: rotate(5deg);
+}
+
+#designImg4 { /* Example: gift_box.png */
+    width: 18vw;
+    bottom: 3vh; /* Pushed closer to the bottom edge */
+    right: 5vw; /* Pushed closer to the right edge */
+    transform: rotate(-10deg);
+}
+
+/* IMPORTANT: Add more #designImgX rules here for any other design images
+   you added in your index.html. Focus on using 'vw', 'vh', 'top', 'left', 'right', 'bottom'
+   to place them in the outer areas of the screen. */
+
+
+/* Optional: Animation for a floating effect */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
+    50% { transform: translateY(-10px) rotate(var(--rotation, 0deg)); }
+    100% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
+}
+
+.design-element {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Override animation rotation if specific elements have their own tilt */
+#designImg1 { --rotation: -15deg; }
+#designImg2 { --rotation: 20deg; }
+#designImg3 { --rotation: 5deg; }
+#designImg4 { --rotation: -10deg; }
+/* Add --rotation for any other design images you give a specific rotation */
